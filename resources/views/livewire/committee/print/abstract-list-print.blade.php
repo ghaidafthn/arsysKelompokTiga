@@ -14,7 +14,7 @@
                 <table class="table table-striped table-sm data-table">
                     <thead class="thead">
                         <tr>
-                            <th width="50%">Title</th>
+                            <th class="text-left" width="50%">Title</th>
                             <th width="50%">Authors</th>
                         </tr>
                     </thead>
@@ -28,7 +28,10 @@
                             <td>
                                 @if ($abstract->author != null)
                                     @foreach ($abstract->author as $author)
-                                        {{$author}}
+                                        {{$author->profile->first_name}}
+                                        <br>
+
+                                        {{$author->profile->email}}
                                     @endforeach
                                 @endif
                             </td>

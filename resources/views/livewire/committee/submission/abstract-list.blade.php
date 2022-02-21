@@ -1,5 +1,11 @@
 <div>
+    <div>
+        <button class="btn btn-primary btn-xs" wire:click="exportToPDF">
+            Export to PDF
+        </button>
+    </div>
     <br>
+
     @if($papers->isNotEmpty())
         <div class="table-responsive users-table">
             <table class="table table-striped table-sm data-table">
@@ -9,7 +15,6 @@
                         <th class="text-center" width="10%">Status</th>
                         <th class="text-center" width="5%">Edit</th>
                         <th class="text-center" width="5%">Authors</th>
-                        <th class="text-center" width="5%">Withdraw</th>
                         <th class="text-center" width="5%">Copyright</th>
                         <th class="text-center" width="5%">Review</th>
                         <th class="text-center" width="5%">Final</th>
@@ -30,13 +35,11 @@
                                 </button>
                             </td>
                             <td class="text-center">
-                                <x-adminlte-button class="btn-sm" icon="fas fa-file-pdf" data-toggle="modal" data-target="#addAuthor_SubmissionAuthor"/>
-                            </td>
-                            <td class="text-center">
-                                <button wire:click="deleteManuscript({{$paper->id}})"class="btn btn-xs">
-                                    <i class="fas fa-minus-circle" style="color: red"></i>
+                                <button class="btn btn-xs">
+                                    <i class="fas fa-user-edit"></i>
                                 </button>
                             </td>
+                         
                             <td class="text-center">
                                 <button class="btn btn-xs">
                                     <i class="far fa-copyright"></i>
@@ -72,5 +75,4 @@
     @else
         There is no submission record, please select <b>Add Paper</b> to create one.
     @endif
-    @include('livewire.author.paper.modal.add-author-modal')
 </div>

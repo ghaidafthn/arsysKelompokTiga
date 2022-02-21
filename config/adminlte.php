@@ -277,6 +277,23 @@ return [
             'icon' => 'far fa-fw fa-file-alt',
             'roles' => 'author',
         ],
+
+        [
+            'text' => 'Belajar Dasar HTML',
+            'route'  => 'lecture.belajarhtml',
+            'icon' => 'far fa-fw fa-file-alt',
+            'roles' => 'author',
+        ],
+
+        ['header' => 'SUBMISSION',
+         'roles' => 'committee',
+        ],
+        [
+            'text' => 'Abstrack List',
+            'route'  => 'committee.submission',
+            'icon' => 'far fa-fw fa-file-alt',
+            'roles' => 'committee',
+        ],
        
 
 
