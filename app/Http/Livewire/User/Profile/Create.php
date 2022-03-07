@@ -9,6 +9,9 @@ use Auth;
 class Create extends Component
 {
     public $lastName;
+    public $firstName;
+    public $email;
+    public $affiliation;
     public function render()
     {
         return view('livewire.user.profile.create');
@@ -17,8 +20,12 @@ class Create extends Component
     public function createProfile(){
         $this->validate([
             'lastName' => 'required',
+            'firstName' => 'required',
+            'email' => 'required',
         ]);
 
+        $this->resetErrorBag();
+        
         $profile = Profile_Sympozia::where('user_id', Auth::user()->id)->first();
         if($profile){
             Profile_Sympozia::where('user_id', Auth::user()->id)->update([
