@@ -1,4 +1,5 @@
 <div>
+    @section('plugins.Select2', true)
     @section('content')
         <div class="row">
             <div class="col-sm-12 offset-sm-0">

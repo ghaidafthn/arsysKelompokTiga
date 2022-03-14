@@ -9,6 +9,6 @@ class Profile_Sympozia extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'first_name', 'last_name', 'email'];
+    protected $fillable = ['user_id', 'user_code', 'first_name', 'last_name', 'affiliation', 'email'];
     protected $table = 'sympozia_profile';
 }

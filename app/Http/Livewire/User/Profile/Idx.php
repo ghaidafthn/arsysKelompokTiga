@@ -10,6 +10,8 @@ use Auth;
 class Idx extends Component
 {
     public $profileMenu;
+    public $profile;
+    public $listeners = ['editUserProfile'];
     public function render()
     {
 
@@ -21,5 +23,10 @@ class Idx extends Component
         if(!$profile){
             $this->profileMenu='create';
         }
+    }
+
+    public function editUserProfile(){
+        dd('here');
+        $this->profile = Profile_Sympozia::where('user_id', Auth::user()->id)->first();
     }
 }
