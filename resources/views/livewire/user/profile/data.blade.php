@@ -69,7 +69,7 @@
     <hr>
     <div class="row">
         <div class="col-sm-12 text-right">
-            <x-adminlte-button wire:click="editProfile" label="Edit profile" theme="success" icon="fas fa-user-circle"/>
+            <x-adminlte-button wire:click="$emitUp('editUserProfile')" label="Edit profile" theme="success" icon="fas fa-user-circle"/>
         </div>
     </div>
     

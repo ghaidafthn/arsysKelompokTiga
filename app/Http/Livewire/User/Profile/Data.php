@@ -13,7 +13,5 @@ class Data extends Component
         return view('livewire.user.profile.data', ['profile' => $profile]);
     }
 
-    public function editProfile(){
-        $this->emit('editUserProfile');
-    }
+   
 }
